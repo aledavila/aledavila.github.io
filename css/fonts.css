@@ -1,0 +1,9 @@
+@font-face {
+  font-family: 'CallunaSans';
+  src: url('fonts/calluna-sans.eot'); /* IE9 Compat Modes */
+  src: url('fonts/calluna-sans?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+       url('fonts/calluna-sans.woff2') format('woff2'), /* Super Modern Browsers */
+       url('fonts/calluna-sans.woff') format('woff'), /* Pretty Modern Browsers */
+       url('fonts/calluna-sans.ttf')  format('truetype'), /* Safari, Android, iOS */
+       url('fonts/calluna-sans.svg#wf') format('svg'); /* Legacy iOS */
+}
