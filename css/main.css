@@ -1,15 +1,34 @@
+:root {
+    --title: #011627;
+    --subtitle: #E71D36;
+    --text: #2EC4B6;
+    --sidenav: 50px;
+}
+html{
+  box-sizing: border-box;
+}
+*,*::before,*::after {
+    box-sizing: inherit;
+    margin: 0;
+    padding: 0;
+}
+::-webkit-scrollbar {
+    display: none;
+}
 body {
-  font-family: "CallunaSans";
+  font-family: "CallunaSans", sans-serif;
   font-size: 16px;
 }
 
+
+/*NAVBAR*/
 .side {
     position: fixed;
     top: 0;
     left: 0;
     bottom: 0;
     z-index: 1000;
-    width: 50px;
+    width: var(--sidenav);
     border-right: 1px dashed rgba(0,0,0,.3);
     color: rgba(0,0,0,.5);
     text-transform: uppercase;
@@ -36,19 +55,19 @@ body {
     left: 0;
     transform:  rotate(-90deg) perspective(1px);
     transform-origin: 50px 50px;
-    height: 50px;
-    line-height: 50px;
+    height: var(--sidenav);
+    line-height: var(--sidenav);
     white-space: nowrap;
     word-spacing: .5rem;
 }
 .side .top {
-    top: calc(50px * .5);
+    top: calc(var(--sidenav) * .5);
     text-align: right;
     color: black;
 }
 .side .bottom {
     top: auto;
-    bottom: calc(50px * 1.5);
+    bottom: calc(var(--sidenav) * 1.5);
 }
 .side .bottom:hover a {
     color: rgba(0,0,0,.2);
@@ -57,9 +76,79 @@ body {
     color: rgba(0,0,0,.8);
 }
 
-header {
+header,
+section {
   display: flex;
   justify-content: center;
+  flex-direction: column;
+}
+section {
+  margin-top: 10%;
+  margin-left: var(--sidenav);
+  padding: 0 4rem;
+}
+@media (max-width:500px) {
+  section {
+    padding: 0 2rem;
+  }
+}
+h2{
+  margin-bottom: 5%;
+  font-size: 2.5em;
+}
+
+/*HEADER*/
+header {
   align-items: center;
   height: 100vh;
+  margin-left: var(--sidenav);
+}
+@media (max-width: 850px) {
+  header{
+    margin-left: calc(var(--sidenav) * 1.5);
+  }
+}
+.header__social {
+  margin-top: 1rem;
+}
+.header__social a {
+  color: black;
+  font-size: 2rem;
+  padding: 0 .75rem;
+}
+
+/*About*/
+p {
+  font-size: 2rem;
+}
+@media (max-width: 500px) {
+  p {
+     font-size: calc(16px + 6 * ((100vw - 320px) / 680));
+  }
+}
+
+
+/*Work*/
+.work__inner {
+  text-align: center;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+.project {
+  width: 33.3%;
+  margin-bottom: 2rem;
+}
+.project img {
+  max-width: 100%;
+}
+@media (max-width: 1280px) {
+  .project{
+    width: 50%;
+  }
+}
+@media (max-width: 900px) {
+  .project{
+    width: 100%;
+  }
 }
