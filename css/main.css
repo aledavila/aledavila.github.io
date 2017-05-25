@@ -118,6 +118,16 @@ header {
 }
 
 /*About*/
+@-webkit-keyframes typing { from { width: 0; } }
+@-webkit-keyframes blink-caret { 50% { border-color: transparent; } }
+
+.about h2 {
+	border-right: .1em solid black;
+	width: 10ch;
+	white-space: nowrap;
+	overflow: hidden;
+	-webkit-animation: blink-caret .5s step-end infinite alternate;
+}
 p {
   font-size: 2rem;
 }
