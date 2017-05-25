@@ -108,6 +108,12 @@ header {
     margin-left: calc(var(--sidenav) * 1.5);
   }
 }
+header h2 {
+  width: 100%;
+  margin: 0;
+  text-align: center;
+  font-size: 2em;
+}
 .header__social {
   margin-top: 1rem;
 }
