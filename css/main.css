@@ -1,8 +1,8 @@
 :root {
-    --title: #011627;
-    --subtitle: #E71D36;
-    --text: #2EC4B6;
+    --text: #6D6875;
     --sidenav: 50px;
+    --font-title: 'Work Sans', sans-serif;
+    --font-body: 'Open Sans', sans-serif;
 }
 html{
   box-sizing: border-box;
@@ -16,8 +16,23 @@ html{
     display: none;
 }
 body {
-  font-family: "CallunaSans", sans-serif;
+  background: #F2E9E4;
+  font-family: var(--font-body);
   font-size: 16px;
+
+  max-width: 100%;
+  overflow-x: hidden;
+  color: var(--text);
+}
+
+h1 {
+  font-family: var(--font-title);
+  text-transform: uppercase;
+}
+
+h2{
+  margin-bottom: 5%;
+  font-size: 2.5em;
 }
 
 
@@ -28,12 +43,15 @@ body {
     left: 0;
     bottom: 0;
     z-index: 1000;
+
     width: var(--sidenav);
-    border-right: 1px dashed rgba(0,0,0,.3);
-    color: rgba(0,0,0,.5);
+    border-right: 1px dashed rgba(109,104,117,.3);
+    color: rgba(109,104,117,.5);
     text-transform: uppercase;
     letter-spacing: .0875rem;
-    font-size: 10px;
+
+    font-family: "CallunaSans", sans-serif;
+    font-size: 11px;
     transition: all 0.3s cubic-bezier(.05, .69, .14, 1);
 }
 .side:hover {
@@ -76,29 +94,15 @@ body {
     color: rgba(0,0,0,.8);
 }
 
-header,
 section {
+  position: fixed;
+  margin-left: var(--sidenav);
+}
+/*HEADER*/
+header {
   display: flex;
   justify-content: center;
   flex-direction: column;
-}
-section {
-  margin-top: 10%;
-  margin-left: var(--sidenav);
-  padding: 0 4rem;
-}
-@media (max-width:500px) {
-  section {
-    padding: 0 2rem;
-  }
-}
-h2{
-  margin-bottom: 5%;
-  font-size: 2.5em;
-}
-
-/*HEADER*/
-header {
   align-items: center;
   height: 100vh;
   margin-left: var(--sidenav);
@@ -127,7 +131,7 @@ header h2 {
 @-webkit-keyframes typing { from { width: 0; } }
 @-webkit-keyframes blink-caret { 50% { border-color: transparent; } }
 
-.about h2 {
+h1 {
 	border-right: .1em solid black;
 	width: 10ch;
 	white-space: nowrap;
@@ -145,7 +149,7 @@ p {
 
 
 /*Work*/
-.work__inner {
+/* .work__inner {
   text-align: center;
   display: flex;
   flex-direction: row;
@@ -167,4 +171,4 @@ p {
   .project{
     width: 100%;
   }
-}
+} */
