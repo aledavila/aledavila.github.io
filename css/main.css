@@ -1,12 +1,12 @@
 :root {
-    --background: #ededed;
-    --header: #4c8aa5;
-    --text: #828282;
-    --inactive: #cccccc;
-    --highlight: #7eb0b7;
+    --background: #F2E9E4;
+    --header: #4A4E69;
+    --text: #9A8C98;
+    --inactive: #C9ADA7;
+    --highlight: #22223B;
     --sidenav: 50px;
-    --font-title: 'CallunaSans', sans-serif;
-    --font-body: 'Poppins', sans-serif;
+    --font-title: 'Work Sans', sans-serif;
+    --font-body: 'Montserrat', sans-serif;
 }
 html{
   box-sizing: border-box;
@@ -25,17 +25,15 @@ html{
 body {
   background: var(--background);
   font-family: var(--font-body);
-  font-size: 16px;
 
   max-width: 100%;
   overflow-x: hidden;
   color: var(--text);
-  font-size: calc(12px + (16 - 12) * ((100vw - 300px) / (1600 - 300)));
+  font-size: calc(12px + (18 - 12) * ((100vw - 300px) / (1600 - 300)));
 }
 
 h1 {
   font-family: var(--font-title);
-  font-weight: 300;
   text-transform: uppercase;
 }
 
@@ -59,7 +57,6 @@ h2{
     text-transform: uppercase;
     letter-spacing: .0875rem;
 
-    font-family: "CallunaSans", sans-serif;
     font-size: 11px;
     transition: all 0.3s cubic-bezier(.05, .69, .14, 1);
 }
@@ -90,7 +87,7 @@ h2{
 .side .top {
     top: calc(var(--sidenav) * .5);
     text-align: right;
-    color: cc5b5b;
+    color: black;
 }
 .side .bottom {
     top: auto;
@@ -126,7 +123,6 @@ header {
 
   height: 100vh;
   margin-left: var(--sidenav);
-  padding-left: 10%;
 }
 @media (max-width: 1100px) {
   header{
@@ -140,11 +136,12 @@ header {
   }
 }
 header h1 {
-	width: 20ch;
+	width: 19ch;
 	white-space: nowrap;
   overflow: hidden;
   border-right: .1em solid black;
   color: var(--header);
+  font-weight: 400;
   letter-spacing: 1.5px;
 	-webkit-animation: blink-caret .5s step-end infinite alternate;
 }
@@ -178,10 +175,13 @@ header h1 {
 }
 .aboutMe p {
   text-align: justify;
+  margin-bottom: 4%;
+  font-size: calc(14px + (28 - 14) * ((100vw - 300px) / (1600 - 300)));
+  font-weight: 500;
 }
 .aboutMe span {
   color: var(--header);
-  font-weight: 500;
+  font-weight: 400;
 }
 .aboutMe a {
   color: var(--highlight);
